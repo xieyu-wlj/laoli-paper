@@ -1,0 +1,4 @@
+interface:
+  display_name: "Laoli Paper"
+  short_description: "Paper writing skills in Laoli style."
+  default_prompt: "Use the introduce module. I will provide my Methods section; infer the dual bottlenecks, align method modules to them, and write a closed-loop manuscript Introduction."
