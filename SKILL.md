@@ -17,7 +17,7 @@ The skill should not write a generic introduction first and then mention the met
 
 Default to an author-style closed loop: field importance -> harder task pressure -> existing method families -> two residual bottlenecks or a central trade-off -> proposed method as a conceptual shift -> two method modules mapped to the bottlenecks -> validation -> contribution symmetry.
 
-Default length and paragraphing should follow the supplied author examples: 3 substantial prose paragraphs plus a contribution list, about 650-750 words for the prose or 700-850 words total when contribution bullets are included. Do not exceed 900 words unless the user explicitly asks for a longer version.
+Default to 3 prose paragraphs plus a contribution list. Keep the opening deliberately compact and place most analytical detail in paragraphs 2 and 3. Aim for about 580-680 words of prose or 650-780 words including contribution bullets. Do not exceed 850 words unless the user explicitly asks for a longer version.
 
 ## Method-First Intake
 
@@ -52,16 +52,17 @@ If the Methods do not reveal the paper's field, objective, or contribution clear
    - Computational or AI paper: data/task importance -> limitations of current models or annotations -> proposed pipeline -> validation.
    - Clinical or cohort study: disease burden -> unresolved clinical question -> cohort/design -> endpoint.
 6. Draft an author-style paragraph blueprint before prose. Use 3 substantial paragraphs plus a contribution list for AI, algorithm, and methods papers unless the user requests a different structure.
-7. Allocate the word budget before drafting: paragraph 1 about 130-170 words, paragraph 2 about 230-300 words, paragraph 3 about 230-300 words, followed by 3 contribution bullets of about 35-60 words each.
+7. Allocate the word budget before drafting: paragraph 1 about 80-110 words, paragraph 2 about 230-280 words, paragraph 3 about 240-290 words, followed by 3 contribution bullets of about 35-50 words each. Treat 120 words as a hard ceiling for paragraph 1 unless the user requests otherwise.
 8. Write the Introduction without adding Results unless the user provided them. End with objective, design, and contribution that are directly supported by the Methods.
 9. Use citation placeholders like `[refs]` unless the user provides references or explicitly asks for literature search.
-10. Include a short self-check: inferred gap, inferred objective, unsupported claims avoided, missing information, and approximate word count.
+10. Revise the prose for argumentative flow. Replace list-like sentences with causal, contrastive, or progressive sentence sequences.
+11. Include a short self-check: inferred gap, inferred objective, unsupported claims avoided, missing information, approximate word count, and enumeration overuse.
 
 ## Preferred Deep Structure
 
 Use this structure especially for AI, computational, methods, or framework papers:
 
-1. Paragraph 1: broad field value plus harder target setting. Establish the major paradigm, why it matters, where it is used, and why the target task is harder than the ordinary version.
+1. Paragraph 1: compact task pressure. Define the major paradigm in one sentence, identify the harder target setting, and end with the central need. Do not survey applications, classify prior work, name every challenge, or explain the proposed method here.
 2. Paragraph 2: progress, taxonomy, and dual bottleneck. Acknowledge existing advances, group recent methods into 2-3 families, state each family's strength and residual limitation, then compress them into two bottlenecks or one explicit trade-off.
 3. Paragraph 3: proposed method and module alignment. Introduce the method as a conceptual shift, explain how each major method module answers a prior bottleneck, mention validation only when provided, and lead into contributions.
 4. Contribution list: make each contribution correspond to a gap, method module, or validation result.
@@ -70,7 +71,7 @@ Use this structure especially for AI, computational, methods, or framework paper
 
 When the input is an AI, NLP, RAG, machine learning, algorithm, or methods paper, prefer this exact three-paragraph rhetorical sequence:
 
-- Paragraph 1: `Task legitimacy and pressure`. Define the task, state its importance and applications, then distinguish the harder target setting from the ordinary version.
+- Paragraph 1: `Compact task legitimacy and pressure`. In 3-5 sentences, define the task, state why the target setting is harder, and identify the resulting need. Mention at most one representative application when it is essential to the problem; otherwise omit applications entirely.
 - Paragraph 2: `Progress, taxonomy, and contradiction`. Acknowledge existing approaches, divide them into two paradigms, state each paradigm's benefit and residual limitation, then end with the core research question or trade-off.
 - Paragraph 3: `Proposed method and module alignment`. Present the method as a comprehensive strategy or conceptual shift. Explain module 1 for bottleneck 1 and module 2 for bottleneck 2, then close with validation and contribution setup.
 
@@ -80,14 +81,14 @@ If the Methods contain only one clear module, still look for a second axis in th
 
 Follow this word budget by default:
 
-- Introduction prose only: 650-750 words.
-- Introduction plus contribution list: 700-850 words total.
+- Introduction prose only: 580-680 words.
+- Introduction plus contribution list: 650-780 words total.
 - Contribution list: 3 bullets by default; 2 bullets only for a narrow paper, 4 only when the Methods clearly support four distinct contributions.
 - Paragraph count: 3 substantial paragraphs before the contribution list.
-- Paragraph 1: 130-170 words.
-- Paragraph 2: 230-300 words.
-- Paragraph 3: 230-300 words.
-- Maximum: 900 words unless the user requests a longer version.
+- Paragraph 1: 80-110 words, with a default hard ceiling of 120 words.
+- Paragraph 2: 230-280 words.
+- Paragraph 3: 240-290 words.
+- Maximum: 850 words unless the user requests a longer version.
 
 If the provided Methods are sparse, write a shorter 450-600 word draft and list missing inputs rather than padding.
 
@@ -112,11 +113,18 @@ Return these sections unless the user asks for only prose:
 - Do not make the method sound more general than the validation supports.
 - Prefer restrained gap language: `remains unclear`, `has not been systematically evaluated`, `is difficult to measure`, `lacks scalable tools`, or `has rarely been tested in [context]`.
 - Avoid listing procedural details in the Introduction. Translate method details into rationale, objective, and study design.
+- Avoid prose that reads like a compressed outline. Do not habitually package three or more functions, applications, benefits, costs, or abstract nouns into one sentence using comma-separated lists or `A, B, and C` constructions.
+- Give each sentence one dominant argumentative job. When several ideas are necessary, connect them across sentences through cause, consequence, contrast, qualification, or progression instead of presenting them as co-equal items.
+- Prefer explaining the most relevant example over naming several generic examples. Retain a short parallel pair only when the contrast itself carries the argument; reserve explicit enumeration for formal contribution lists, method taxonomies, and genuinely discrete variables.
+- During revision, scan every sentence with two or more commas or a terminal `and`. If removing or reordering the listed items would not alter the logic, rewrite the sentence around the underlying relationship.
+- Avoid repeated noun-heavy patterns such as `deliberation, verification, and integration` or `repeated rationales, growing costs, and diminishing returns`. Turn them into movement: state what happens first, why it creates a problem, and what follows.
+- Keep paragraph 1 lean. It should establish pressure, not provide a miniature literature review. Remove generic claims, application inventories, repeated statements of importance, and any sentence whose deletion does not weaken the transition into paragraph 2.
+- Draft paragraph 1 last when necessary. Once the two bottlenecks are clear, retain only the minimum context required for the reader to understand why those bottlenecks matter.
 - When the method has multiple modules, write them as answers to separate bottlenecks rather than as a procedural sequence.
 - Preserve the author's balanced critique pattern: `Although these methods..., however...`.
 - Prefer a research-question bridge when there is a trade-off: `This naturally raises the question of whether...`.
 - For contribution lists, preserve one-to-one correspondence among gap, method module, and validation.
-- Keep paragraph lengths uneven in the author's pattern: shorter opening, long taxonomy/contradiction paragraph, long method-alignment paragraph, then contribution bullets.
+- Keep paragraph lengths visibly uneven: a compact opening of no more than 120 words, followed by a longer taxonomy/contradiction paragraph and a longer method-alignment paragraph, then contribution bullets.
 - For Chinese user requests or Chinese Methods text, draft the final Introduction in English by default unless the user asks for Chinese.
 
 ## Resources

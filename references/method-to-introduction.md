@@ -19,17 +19,17 @@ Use this routine for strong methods, AI, algorithm, or framework introductions.
 
 The target author style is a dual-bottleneck or trade-off-driven Introduction. It should feel as if the method is inevitable because each module is forced by a prior limitation.
 
-Default author-style length: 650-750 words for prose, or 700-850 words including contribution bullets. Use 3 substantial prose paragraphs plus a contribution list. The two reference examples are roughly 650 and 740 words, so avoid very short 300-word introductions, 5-paragraph school-style introductions, or sprawling 1200-word reviews unless requested.
+Default author-style length: 580-680 words for prose, or 650-780 words including contribution bullets. Use 3 prose paragraphs plus a contribution list, but keep the first paragraph much shorter than the other two. Avoid very short 300-word introductions, 5-paragraph school-style introductions, or sprawling reviews unless requested.
 
 ### 1. Establish the paradigm, then stress it
 
-Start with a recognized field-level paradigm and its value. Then immediately name the harder setting where the paradigm becomes insufficient.
+Start with a recognized field-level paradigm and immediately name the harder setting where it becomes insufficient. Keep this paragraph to 80-110 words and 3-5 sentences; never exceed 120 words by default. Do not open with an application survey or a catalogue of benefits. Mention one application only when it directly creates the target problem.
 
 Template:
 
 `[Paradigm] has improved [broad capability] by [mechanism]. It is widely used in [applications]. However, [harder setting] requires [extra reasoning/data/measurement], making [standard version] insufficient.`
 
-The first paragraph should not merely say the topic is important. It should create pressure: the reader must see why ordinary methods fail in the target scenario.
+The first paragraph should not merely say the topic is important. It should create pressure: the reader must see why ordinary methods fail in the target scenario. Stop once that pressure is clear. Move prior-work families, detailed limitations, and the proposed method to later paragraphs.
 
 ### 2. Taxonomize prior work to create structured gaps
 
@@ -132,16 +132,35 @@ Use these moves sparingly and adapt them to the user's domain:
 - `This observation naturally raises the question of whether [capability A] can be achieved while preserving [capability B].`
 - `To this end, we propose [method], a comprehensive strategy that [resolves trade-off].`
 
+## Anti-Enumeration Revision
+
+Academic density should come from logical compression, not from stacking nouns. Treat comma-separated triples and repeated `A, B, and C` constructions as warning signs, especially when the listed items are generic applications, virtues, limitations, or costs.
+
+Revise them by recovering the relationship hidden inside the list:
+
+- Replace an application list with the single use case that creates the paper's task pressure.
+- Replace a limitation list with a short causal chain: the design first causes redundancy; redundancy raises cost; later rounds then yield less useful change.
+- Replace a capability list with a contrast or progression that explains which capability is insufficient and why the next one is needed.
+- Keep explicit lists only when the categories are analytically distinct and used later in the argument, such as the three measured instability variables.
+
+Example:
+
+`Weak: Increasing communication may expose additional evidence, yet it also introduces repeated rationales, growing inference costs, and diminishing returns.`
+
+`Stronger: Additional communication can expose agents to new evidence. As similar rationales begin to recirculate, however, each round becomes more expensive while changing the collective state less.`
+
+Do not mechanically split every long sentence. The goal is a visible line of reasoning, with sentence length varied according to emphasis.
+
 ## Word Budget Pattern
 
-Use this allocation for a 700-800 word Introduction:
+Use this allocation for a 650-780 word Introduction:
 
-1. Paragraph 1, task legitimacy and pressure: 130-170 words.
-2. Paragraph 2, progress, two-family taxonomy, and contradiction: 230-300 words.
-3. Paragraph 3, proposed method and module alignment: 230-300 words.
-4. Contributions: 3 bullets, about 35-60 words each.
+1. Paragraph 1, compact task legitimacy and pressure: 80-110 words, maximum 120.
+2. Paragraph 2, progress, two-family taxonomy, and contradiction: 230-280 words.
+3. Paragraph 3, proposed method and module alignment: 240-290 words.
+4. Contributions: 3 bullets, about 35-50 words each.
 
-Compress by shortening applications and citation-heavy background first. Do not compress the two-family taxonomy or module alignment too aggressively, because those are the author's signature moves.
+Compress paragraph 1 first. Remove applications, broad praise of the field, and repeated importance claims before cutting the two-family taxonomy or module alignment, because those later sections carry the argument.
 
 ## Pattern A: Empirical Study
 
@@ -212,10 +231,13 @@ Use placeholders when needed:
 ## Self-Review Questions
 
 - Does paragraph 1 create a clear task pressure rather than only listing applications?
+- Is paragraph 1 within 80-110 words, and no more than 120 words without an explicit user request?
+- Can any opening sentence be deleted without weakening the bridge to paragraph 2? If so, delete it.
 - Does the prior-work taxonomy have a reason for being split into these categories?
 - Does each limitation point toward something the proposed method actually contains?
 - Is the method introduced as a principle-level move before technical details?
 - Can every contribution be traced back to an earlier gap?
 - Are results and benchmark claims omitted unless the user provided them?
 - Is there a visible symmetry between prior-work families, method modules, and contribution bullets?
-- Is the prose close to the 650-750 word target, or shorter only because the Methods lacked enough information?
+- Is the prose close to the 580-680 word target, or shorter only because the Methods lacked enough information?
+- Do any sentences merely stack three or more generic items where a causal, contrastive, or progressive relation would be clearer?
