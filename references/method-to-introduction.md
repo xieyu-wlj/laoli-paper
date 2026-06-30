@@ -74,23 +74,27 @@ Weak bottlenecks are vague:
 - performance is limited.
 - more research is needed.
 
-### 4. Introduce the method as a conceptual shift
+### 4. State the framework effect before method mechanics
 
-Do not introduce the method only as a name. Present it as a shift from an old operating principle to a new one.
+Open paragraph 3 with one sentence that names the method and states the complete framework's effect:
 
-Template:
+`To address these [challenges/limitations], we propose [method], which [framework-level capability or problem-resolution effect].`
 
-`To address these challenges, we propose [method], which shifts from [old principle] to [new principle].`
+The `which` clause must answer: `What does the framework achieve as a whole?` It must not answer: `What is the framework made of?` or `How does it work?`
 
-Examples of old-to-new contrasts:
+Prefer effect verbs such as `enables`, `supports`, `preserves`, `improves`, `resolves`, or `provides`. Avoid component or mechanism verbs such as `incorporates`, `combines`, `consists of`, `employs`, or `shifts from ... to ...` in this opening clause.
 
-- isolated similarity retrieval -> combinatorial evidence selection.
-- structured propagation -> incremental reasoning-state augmentation.
-- fixed representations -> adaptive basis expansion.
-- local relevance -> cooperative semantic coverage.
-- manually designed prompts -> reinforced prompt exploration.
-- shared prompt templates -> instance-aware prompt generation.
-- task-wide adaptation -> joint task- and instance-level adaptation.
+Good examples:
+
+- `To address these challenges, we propose [method], which enables cooperative evidence selection while preserving accumulated reasoning information across hops.`
+- `To address these limitations, we propose [method], which improves task- and instance-level adaptability while retaining prompt interpretability.`
+
+Bad examples:
+
+- `To address these challenges, we propose [method], which incorporates a Shapley module and an orthogonal update module.`
+- `To address these challenges, we propose [method], which shifts from isolated retrieval to combinatorial selection.`
+
+After the opening sentence, explain each module in a separate sentence and map it to the corresponding bottleneck. A conceptual old-to-new contrast may appear later only when it clarifies the mechanism. Treat the opening effect as a bounded functional claim, not as evidence of superior empirical performance.
 
 ### 5. Map every method module to one bottleneck
 
@@ -130,7 +134,7 @@ Use these moves sparingly and adapt them to the user's domain:
 - `However, [B] inherently [limitation], despite [benefit].`
 - `Critically, despite their differences, both approaches [shared limitation].`
 - `This observation naturally raises the question of whether [capability A] can be achieved while preserving [capability B].`
-- `To this end, we propose [method], a comprehensive strategy that [resolves trade-off].`
+- `To address these [challenges], we propose [method], which [states the complete framework's effect in one clause].`
 
 ## Anti-Enumeration Revision
 
@@ -235,7 +239,7 @@ Use placeholders when needed:
 - Can any opening sentence be deleted without weakening the bridge to paragraph 2? If so, delete it.
 - Does the prior-work taxonomy have a reason for being split into these categories?
 - Does each limitation point toward something the proposed method actually contains?
-- Is the method introduced as a principle-level move before technical details?
+- Does paragraph 3 open with `To address these..., we propose..., which...`, with the `which` clause stating the complete framework's effect rather than its components or mechanism?
 - Can every contribution be traced back to an earlier gap?
 - Are results and benchmark claims omitted unless the user provided them?
 - Is there a visible symmetry between prior-work families, method modules, and contribution bullets?

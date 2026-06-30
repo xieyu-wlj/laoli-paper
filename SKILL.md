@@ -53,10 +53,11 @@ If the Methods do not reveal the paper's field, objective, or contribution clear
    - Clinical or cohort study: disease burden -> unresolved clinical question -> cohort/design -> endpoint.
 6. Draft an author-style paragraph blueprint before prose. Use 3 substantial paragraphs plus a contribution list for AI, algorithm, and methods papers unless the user requests a different structure.
 7. Allocate the word budget before drafting: paragraph 1 about 80-110 words, paragraph 2 about 230-280 words, paragraph 3 about 240-290 words, followed by 3 contribution bullets of about 35-50 words each. Treat 120 words as a hard ceiling for paragraph 1 unless the user requests otherwise.
-8. Write the Introduction without adding Results unless the user provided them. End with objective, design, and contribution that are directly supported by the Methods.
-9. Use citation placeholders like `[refs]` unless the user provides references or explicitly asks for literature search.
-10. Revise the prose for argumentative flow. Replace list-like sentences with causal, contrastive, or progressive sentence sequences.
-11. Include a short self-check: inferred gap, inferred objective, unsupported claims avoided, missing information, approximate word count, and enumeration overuse.
+8. Open paragraph 3 with the required framework-effect sentence: `To address these [challenges/limitations], we propose [method], which [states in one clause what the complete framework enables or achieves].` Make the `which` clause answer "What does the framework accomplish?", not "What components does it contain?" or "How is it implemented?"
+9. Write the remaining Introduction without adding Results unless the user provided them. End with objective, design, and contribution that are directly supported by the Methods.
+10. Use citation placeholders like `[refs]` unless the user provides references or explicitly asks for literature search.
+11. Revise the prose for argumentative flow. Replace list-like sentences with causal, contrastive, or progressive sentence sequences.
+12. Include a short self-check: inferred gap, inferred objective, unsupported claims avoided, missing information, approximate word count, enumeration overuse, and compliance with the paragraph-3 framework-effect opening.
 
 ## Preferred Deep Structure
 
@@ -64,7 +65,7 @@ Use this structure especially for AI, computational, methods, or framework paper
 
 1. Paragraph 1: compact task pressure. Define the major paradigm in one sentence, identify the harder target setting, and end with the central need. Do not survey applications, classify prior work, name every challenge, or explain the proposed method here.
 2. Paragraph 2: progress, taxonomy, and dual bottleneck. Acknowledge existing advances, group recent methods into 2-3 families, state each family's strength and residual limitation, then compress them into two bottlenecks or one explicit trade-off.
-3. Paragraph 3: proposed method and module alignment. Introduce the method as a conceptual shift, explain how each major method module answers a prior bottleneck, mention validation only when provided, and lead into contributions.
+3. Paragraph 3: framework effect, then module alignment. Open with `To address these [challenges], we propose [method], which [framework-level effect].` Use the `which` clause to summarize the overall capability or problem-resolution effect in one sentence. Explain modules and mechanisms only in the following sentences, mention validation only when provided, and lead into contributions.
 4. Contribution list: make each contribution correspond to a gap, method module, or validation result.
 
 ## Author-Style Blueprint
@@ -73,7 +74,25 @@ When the input is an AI, NLP, RAG, machine learning, algorithm, or methods paper
 
 - Paragraph 1: `Compact task legitimacy and pressure`. In 3-5 sentences, define the task, state why the target setting is harder, and identify the resulting need. Mention at most one representative application when it is essential to the problem; otherwise omit applications entirely.
 - Paragraph 2: `Progress, taxonomy, and contradiction`. Acknowledge existing approaches, divide them into two paradigms, state each paradigm's benefit and residual limitation, then end with the core research question or trade-off.
-- Paragraph 3: `Proposed method and module alignment`. Present the method as a comprehensive strategy or conceptual shift. Explain module 1 for bottleneck 1 and module 2 for bottleneck 2, then close with validation and contribution setup.
+- Paragraph 3: `Framework effect and module alignment`. First state the complete framework's effect in the required `To address these..., we propose..., which...` sentence. Then explain module 1 for bottleneck 1 and module 2 for bottleneck 2, and close with validation and contribution setup.
+
+## Paragraph 3 Opening Rule
+
+Use this required pattern:
+
+`To address these [challenges/limitations], we propose [method], which [one-clause framework-level effect linked to the preceding gaps].`
+
+The `which` clause must state what the complete framework enables, preserves, improves, or resolves. It must not enumerate components or explain implementation. Do not use the `which` clause to write `incorporates`, `combines`, `consists of`, `employs`, `introduces module A and module B`, or `shifts from [old mechanism] to [new mechanism]`.
+
+Good: `..., which enables cooperative evidence selection while preserving accumulated reasoning information across hops.`
+
+Good: `..., which improves task- and instance-level adaptability while retaining prompt interpretability.`
+
+Bad: `..., which incorporates a Shapley module and an orthogonal update module.`
+
+Bad: `..., which shifts from isolated retrieval to combinatorial selection.`
+
+After this opening sentence, use separate sentences to explain the individual modules and their mechanisms. Treat the effect as a functional claim rather than an empirical result; do not claim superior performance unless the user provides results.
 
 If the Methods contain only one clear module, still look for a second axis in the design: optimization, representation, instance specificity, scalability, interpretability, robustness, information preservation, or validation.
 
